@@ -30,6 +30,10 @@ EOL
 fi
 
 # tc home
+cd ~
+wget https://raw.githubusercontent.com/lin-silas/pcp-hqplayer-embedded/main/hqp.sh
+wget https://raw.githubusercontent.com/lin-silas/pcp-hqplayer-embedded/main/lms.sh
+sudo chmod +x *.sh
 mkdir -p ~/hqplayer/modules-load.d
 mkdir -p ~/hqplayer/udev/rules.d
 cd ~/hqplayer
