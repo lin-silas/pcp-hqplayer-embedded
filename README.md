@@ -11,3 +11,8 @@ Login to piCorePlayer using ssh
 To install HQPlayer embedded, run:
 
 `wget -O - https://raw.githubusercontent.com/lin-silas/pcp-hqplayer-embedded/main/hqpayer_install.sh | sh`
+
+Default web UI login:
+
+* login: `hqp`
+* password: `hqpw`
