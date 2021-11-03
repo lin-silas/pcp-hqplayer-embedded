@@ -8,6 +8,6 @@ Login to piCorePlayer using ssh
 * login: `tc`
 * password: `piCore`
 
-To install HQPWV, run:
+To install HQPlayer embedded, run:
 
 `wget -O - https://raw.githubusercontent.com/lin-silas/pcp-hqplayer-embedded/main/hqpayer_install.sh | sh`
