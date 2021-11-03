@@ -12,7 +12,7 @@ To install HQPlayer embedded, run:
 
 `wget -O - https://raw.githubusercontent.com/lin-silas/pcp-hqplayer-embedded/main/hqpayer_install.sh | sh`
 
-Default web UI login:
+Default web login:
 
 * login: `hqp`
 * password: `hqpw`
