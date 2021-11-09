@@ -16,3 +16,9 @@ Default web URL: (your-pi-ip:8088)
 
 * login: `hqp`
 * password: `hqpw`
+
+If you don't want to autostart HQPlayer embedded, you can change in piCorePlayer's web UI.
+
+Choose [Tweaks] -> [User command #1]
+
+Change `/home/tc/hqp.sh` to `#/home/tc/hqp.sh`
