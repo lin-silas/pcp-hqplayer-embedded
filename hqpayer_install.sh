@@ -16,18 +16,6 @@ sed -i '/glib2.tcz/d' libudev.tcz.dep
 tce-load -i ca-certificates.tcz
 wget https://raw.githubusercontent.com/lin-silas/pcp-hqplayer-embedded/main/hqplayer.tcz
 
-sed -i '11,$d' /opt/bootlocal.sh
-if [ `grep -c 'hqplayerd' /opt/bootlocal.sh` -eq 0 ]
-then
-  cat << 'EOL' >> /opt/bootlocal.sh
-#--- Add by Sam0402
-ldconfig
-sudo -u tc hqplayerd &
-sleep 3
-taskset -p 0x00000008 $(pgrep hqplayerd*)
-#--- Add by Sam0402
-EOL
-fi
 
 # tc home
 cd ~
@@ -39,6 +27,7 @@ mkdir -p ~/hqplayer/udev/rules.d
 cd ~/hqplayer
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayerd.xml
 wget https://raw.githubusercontent.com/sam0402/pCP-addon/main/HQPlayer/hqplayerd-auth.xml
+pcp_write_var_to_config USER_COMMAND_1 "hqp.sh"
 
 echo "Rebooting..."
 sleep 3
